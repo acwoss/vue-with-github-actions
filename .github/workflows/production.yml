@@ -7,17 +7,17 @@ jobs:
     name: Install dependencies and building application for production
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
-    - name: Installing application dependencies
-    - run: npm install --only=production
-    - name: Building the application
-    - run: npm run build
-    - name: Upload dist directory as artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: dist
-        path: dist
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+      - name: Installing application dependencies
+      - run: npm install --only=production
+      - name: Building the application
+      - run: npm run build
+      - name: Upload dist directory as artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: dist
+          path: dist
   deploy:
     name: Deploy application on AWS S3
     runs-on: ubuntu-latest
