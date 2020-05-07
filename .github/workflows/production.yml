@@ -12,7 +12,7 @@ jobs:
       - name: Installing Node
         uses: actions/setup-node@master
       - name: Installing application dependencies
-        run: npm install --only=production
+        run: npm install
       - name: Building the application
         run: npm run build
       - name: Upload dist directory as artifact
