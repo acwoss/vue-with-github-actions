@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Está em produção alterado"/>
+    <HelloWorld msg="Está em produção alterado de novo"/>
   </div>
 </template>
 
